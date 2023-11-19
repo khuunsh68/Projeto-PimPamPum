@@ -40,6 +40,15 @@ class PimPamPumTest {
     }
 
     @Test
+    // Teste conter digito 3
+    public void testRun_Conter3() {
+        PimPamPum pimPamPum = new PimPamPum();
+        String esperado = "PimPim";
+        String atual = pimPamPum.run(3);
+        assertEquals(esperado, atual, "Esperado equivale ao atual");
+    }
+
+    @Test
     // Teste conter digito 5
     public void testRun_Conter5() {
         PimPamPum pimPamPum = new PimPamPum();
@@ -49,20 +58,20 @@ class PimPamPumTest {
     }
 
     @Test
-    // Teste divisível por 3 e conter digito 3
-    public void testRun_DivisivelPor3Conter3() {
-        PimPamPum pimPamPum = new PimPamPum();
-        String esperado = "PimPimPim";
-        String atual = pimPamPum.run(33);
-        assertEquals(esperado, atual, "Esperado equivale ao atual");
-    }
-
-    @Test
     // Teste conter digito 7
     public void testRun_Conter7() {
         PimPamPum pimPamPum = new PimPamPum();
         String esperado = "PumPum";
         String atual = pimPamPum.run(7);
+        assertEquals(esperado, atual, "Esperado equivale ao atual");
+    }
+
+    @Test
+    // Teste divisível por 3 e conter digito 3
+    public void testRun_DivisivelPor3Conter3() {
+        PimPamPum pimPamPum = new PimPamPum();
+        String esperado = "PimPimPim";
+        String atual = pimPamPum.run(33);
         assertEquals(esperado, atual, "Esperado equivale ao atual");
     }
 
@@ -102,7 +111,7 @@ class PimPamPumTest {
 
     @Test
     // Teste não ser divisível por 3 e 5
-    public void testRun_DivisivelPor3Por5() {
+    public void testRun_NaoDivisivelPor3Por5() {
         PimPamPum pimPamPum = new PimPamPum();
         String resultado = pimPamPum.run(21);
         assertFalse(resultado.contains("PimPam"));
