@@ -129,6 +129,6 @@ class PimPamPumTest {
         PimPamPum pimPamPum =new PimPamPum();
         String esperado = "PimPamPum";
         String atual = pimPamPum.run(0);
-        assertEquals(esperado, atual, "O esperado corresponde ao atual");
+        assertEquals(esperado, atual, "O resultado de numero zero e 'PimPamPum'");
     }
 }
