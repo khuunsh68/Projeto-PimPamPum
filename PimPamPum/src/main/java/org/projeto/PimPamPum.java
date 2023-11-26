@@ -1,7 +1,5 @@
 package org.projeto;
-
 public class PimPamPum {
-
     public String run(int num) {
 
         if (num < 0) {
